@@ -1,2 +1,4 @@
 # fracture-Detection
- Detection fresh and old fracture on spine CT image using YOLOR
+ 此儲存庫使用**分割模型**
+ 
+## 環境
