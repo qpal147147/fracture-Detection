@@ -1,6 +1,9 @@
 # fracture-Detection
  此儲存庫使用**分割模型**
  
+## 範例
+ ![segmentation](https://github.com/qpal147147/fracture-Detection/blob/segmentation/segmentation.png)  
+ 
 ## 環境
 * python=3.8.11
 * tensorflow=2.4.0
