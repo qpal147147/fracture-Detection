@@ -11,11 +11,61 @@
 * keras-preprocessing=1.1.2
 * opencv-python=4.5.4.6
 * numpy=1.19.5
+* numba=0.41.0
 * Classification models
 ```python
 pip install image-classifiers==0.2.2
 ```
 
+## 訓練
+ ### 數據集
+ **注意**: 影像與註釋的數量必須一樣
+ 
+    datasets/
+        -project_name/
+            -train_name/
+                -image_name/
+                    -image/
+                        -*.bmp(Formats supported by tensorflow)
+                -mask_name/
+                    -mask/
+                        -*.bmp(Formats supported by tensorflow)
+
+    # for example
+    datasets/
+        -fracture/
+            -train/
+                -image_set/
+                    -image/
+                        -00001.bmp
+                        -00002.bmp
+                        -00003.bmp
+                -mask_set/
+                    -mask/
+                        -00001.bmp
+                        -00002.bmp
+                        -00003.bmp
+                  
+   ### 開始訓練
+   如果你的影像路徑為如下所示:
+   ```C:\datasets\fracture\train\image_set\image\00001.bmp```  
+   則train.py的trainX_dir、trainY_dir參數為:
+   ```C:\datasets\fracture\train\image_set```
+   
+   * 訓練
+   ```python
+   python train.py
+   ```
+
+## 評估
+ ```python
+ python ./eval/main.py -s path/to/seg -g path/to/gt
+ ```
+## 測試
+ ```python
+ python inference.py
+ ```
+ 
 ## 參考
 * <https://github.com/qubvel/classification_models>
 * <https://github.com/mlyg/unified-focal-loss>
@@ -25,3 +75,4 @@ pip install image-classifiers==0.2.2
 * <https://github.com/billymoonxd/ResUNet>
 * <https://github.com/billymoonxd/ResUNet>
 * <https://www.kaggle.com/code/momincks/medical-image-segmentation-with-ce-net/notebook>
+* <https://github.com/FabioXimenes/SegmentationMetrics>
