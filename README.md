@@ -17,6 +17,15 @@
 pip install image-classifiers==0.2.2
 ```
 
+## 可用模型(未按照年分排序)
+* CBAM_ASPP_ResUNet
+* CPF-Net
+* CE-Net
+* PSPNet
+* ResUNet++
+* UNet3+
+* VNet
+
 ## 訓練
  ### 數據集
  **注意**: 影像與註釋的數量必須一樣
