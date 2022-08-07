@@ -1,5 +1,5 @@
 # fracture-Detection
- 此儲存庫使用**分割模型**
+ 此分支使用**分割模型**
  
 ## 範例
  ![segmentation](https://github.com/qpal147147/fracture-Detection/blob/segmentation/segmentation.png)  
