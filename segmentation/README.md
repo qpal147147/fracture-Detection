@@ -1,8 +1,8 @@
-# fracture-Detection
- 此分支使用**分割模型**
+# Fracture segmentation
+ 此文件使用**分割模型**
  
 ## 範例
- ![segmentation](https://github.com/qpal147147/fracture-Detection/blob/segmentation/segmentation.png)  
+ ![segmentation](https://github.com/qpal147147/fracture-Detection/blob/main/segmentation/segmentation.png)  
  
 ## 環境
 * python=3.8.11
