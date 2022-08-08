@@ -1,5 +1,5 @@
 # fracture-Detection
-此分支使用**Scaled-YOLOv4**
+此文件使用**Scaled-YOLOv4**
 
 環境、訓練、測試、檢測方式請參考[ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4)
 
