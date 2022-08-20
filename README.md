@@ -28,7 +28,7 @@
 ## 推論
 
 ## UI
-
+![UI](https://github.com/qpal147147/fracture-Detection/blob/main/example/ui.gif)
 
 ## 參考
  * https://github.com/WongKinYiu/yolor
