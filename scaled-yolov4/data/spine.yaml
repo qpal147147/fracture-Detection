@@ -1,0 +1,10 @@
+# train and val datasets (image directory or *.txt file with image paths)
+train: ./data/datasets/fracture/images/train
+val: ./data/datasets/fracture/images/val
+test: ./data/datasets/fracture/images/test
+
+# number of classes
+nc: 2
+
+# class names
+names: ['fresh', 'old']
