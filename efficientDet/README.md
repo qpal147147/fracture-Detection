@@ -21,7 +21,7 @@
   使用csv格式
   
     path/to/img.bmp, x1, y1, x2, y2, class_name
-  其中```x1```與```y1```為左上角座標，```x2```與```y2```為右下角座標
+  其中`x1`與`y1`為左上角座標，`x2`與`y2`為右下角座標
   
   如果影像沒有標記物件，格式為:
   
@@ -32,7 +32,7 @@
   python yolo2csv.py --images datasets/images --labels datasets/labels
   ```
   
-  轉換後輸出```annotations.csv```與```class.csv```
+  轉換後輸出`annotations.csv`與`class.csv`
 
   ### 範例
   * annotations.csv
@@ -48,6 +48,7 @@
         old,1
 
   如果要修改class，請更改[預設類別](https://github.com/qpal147147/fracture-Detection/blob/main/util/yolo2csv.py#L10)
+
 
   ### 開始訓練
   * Step1:
