@@ -11,25 +11,40 @@
  
     path/to/img.bmp,,,,,
  
-如果你有yolo格式的label，可使用[yolo2cvs.py](https://github.com/qpal147147/fracture-Detection/blob/main/util/yolo2csv.py)進行轉換:  
+如果你有yolo格式的label檔案，可使用[yolo2csv.py](https://github.com/qpal147147/fracture-Detection/blob/main/util/yolo2csv.py)進行轉換:  
 ```python
 python yolo2csv.py --images datasets/images --labels datasets/labels
 ```
 轉換後輸出```annotations.csv```與```class.csv```
 
+### 範例
+* annotations.csv
+
+      000001.jpg,128,47,173,82,old
+      000001.jpg,347,431,363,455,fresh
+      000002.jpg,48,13,79,34,fresh
+      000003.jpg,,,,,
+
+* class.csv
+
+      fresh,0
+      old,1
+
+如果要修改class，請更改[預設類別](https://github.com/qpal147147/fracture-Detection/blob/main/util/yolo2csv.py#L10)
+
 ### 開始訓練
 ```python
-python train.py --dataset csv --csv_train train_annots.csv  --csv_classes class_list.csv  --csv_val val_annots.csv --batch-size 16 --epochs 100
+python train.py --dataset csv --csv_train train_annots.csv  --csv_classes class.csv  --csv_val val_annots.csv --batch-size 16 --epochs 100
 ```
 
 ## 評估
 ```python
-python csv_validation.py --csv_annotations_path test_annots.csv --class_list_path class_list.csv --model_path weights/model.pt
+python csv_validation.py --csv_annotations_path test_annots.csv --class_list_path class.csv --model_path weights/model.pt
 ```
 
 ## 可視化
 ```python
-python visualize_single_image.py --image_dir path/to/images --model_path weights/model.pt --class_list class_list.csv
+python visualize_single_image.py --image_dir path/to/images --model_path weights/model.pt --class_list class.csv
 ```
 ## 參考
 * https://github.com/yhenon/pytorch-retinanet
