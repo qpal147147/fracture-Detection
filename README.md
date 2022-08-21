@@ -19,6 +19,24 @@
 <img src="https://github.com/qpal147147/fracture-Detection/blob/main/example/System%20flow.png" height="300">
 骨質疏鬆症所引起的脊椎壓迫性骨折是造成老年人疼痛與失能的原因之一，及早發現並採取治療是非常重要的事情。在MRI影像上儘管能有效的診斷出症狀，但需要較高的診斷成本，相較於MRI，CT影像診斷成本比MRI低，且在許多疾病上的診斷也相當良好，但在脊椎骨折上檢測效果卻不如MRI準確。綜合上述，為了能夠使診斷加速及把握治療的黃金期，我們提出了基於YOLOR物件檢測方法，對脊椎CT影像定位骨折區域並判別新舊骨折。實驗結果顯示，在基礎的YOLOR物件檢測方法上，獲得了92.6%的準確率，依照YOLOR架構進行Backbone的替換，將原架構中的CSPDarknet53替換為MobileViT以及EfficientNet_NS，訓練出三種不同Backbone的YOLOR模型，用以提升提取特徵的能力，分別獲得了89%、89.8%及89.2%的準確度。在此基礎上，替換卷積層為Involution層以及結合模型集成方式，集成改進的三種網路，準確率能夠提升至93.4%。
 
+### 實驗比較
+| Model | Backbone | Precision | Recall | AP<sub>fresh</sub> | AP<sub>old</sub> | mAP@0.5
+| :--: | :--: | :--: | :--: | :--: | :--: | :--: 
+| EfficientDet | EfficientNetB0 | 17.5% | 96.2% | 87.7% | 83% | 85.4%
+| RetinaNet | ResNet50 | 38.2% | 94% | 90.1% | 82.3% | 86.2%
+| YOLOv4 | CSPDarknet53 | 53.4% | 92.2% | 92% | 84.6% | 88.4%
+| Scaled-YOLOv4 | CSPDarknet53 | 62% | 90.4% | 93.2% | 84.6% | 88.9%
+| | | | | | |
+| YOLOR | CSPDarknet53 | 65% | 91.1% | 92.6% | 85.4% | 89%
+| YOLOR | MobileViT | 60.6% | 92.1% | 92.9% | 86.7% | 89.8%
+| YOLOR | EfficientNet_NS | 69.1% | 89.9% | 92.9% | 85.6% | 89.2%
+| | | | | | |
+| YOLOR | CSPDarknet53<sub>invo</sub> | 71.3% | 91.8% | 93.7% | 88.2% | 90.9%
+| YOLOR | MobileViT<sub>invo</sub> | 61.8% | 92.2% | 93.1% | 87.5% | 90.3%
+| YOLOR | EfficientNet_NS<sub>invo</sub> | 65.6% | 91.1% | 92.7% | 86.3% | 89.5%
+| | | | | | |
+| YOLOR | Ensemble | 63.4% | 95.1% | 95.4% | 91.5% | 93.4%
+
 ## 環境
 ``` shell
 pip install -r requirements.txt
