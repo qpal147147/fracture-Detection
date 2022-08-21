@@ -110,10 +110,10 @@ python test.py --data data/spine.yaml --weights yolor_p6.pt --batch 16 --img-siz
 python test.py --data data/spine.yaml --weights yolor_p6.pt yolor_mobilevit.pt yolor_efficient_ns.pt --batch 16 --img-size 640 --task test --device 0
 ```
 
-## 推論
+## 檢測
 * 單模型
 ``` python
-# --source 可以從各種來源進行推論
+# --source 可以從各種來源進行檢測
 python detect.py --source datasets/images/fracture.jpg --weights yolor_p6.pt --img-size 640 --device 0 --save-txt
                           0 # webcam
                           img.jpg  # image
@@ -127,6 +127,26 @@ python detect.py --source datasets/images/fracture.jpg --weights yolor_p6.pt yol
 ```
 
 ## 二階段分類器
+使用二階段分類器可以提高模型的準確率，降低模型的誤判率，但會使檢測時間提高  
+可在評估及檢測命令後面增加`--classifier`、`--classifier-weights`、`--classifier-size`、`--classifier-thres`
+
+關於分類器的詳細資訊，請參考[這裡](https://github.com/qpal147147/fracture-Detection/tree/main/classifier)
+
+``` python
+# for example
+# evaluation
+python test.py --data data/spine.yaml --weights yolor_p6.pt --batch 16 --img-size 640 --task test --device 0 --classifier --classifier-weights model_best.pth.tar --classifier-size 96 --classifier-thres 0.6
+
+# detect
+python detect.py --source datasets/images/fracture.jpg --weights yolor_p6.pt --img-size 640 --device 0 --save-txt --classifier --classifier-weights model_best.pth.tar --classifier-size 96 --classifier-thres 0.6
+```
+
+| 參數 | 描述
+| ------------- | -------------
+| classifier | 是否啟用分類器
+| classifier-weights | 分類器權重路徑
+| classifier-size | 分類器檢測的影像尺寸
+| classifier-thres | 用於改變檢測類別的閥值。當分類機率超過該閥值時，代表分類器高度自信，因此將原始的檢測類別更改為分類的類別
 
 ## UI
 ![UI](https://github.com/qpal147147/fracture-Detection/blob/main/example/ui.gif)
@@ -136,3 +156,4 @@ python detect.py --source datasets/images/fracture.jpg --weights yolor_p6.pt yol
  * https://github.com/ultralytics/yolov5
  * https://github.com/gradio-app/gradio
  * https://github.com/ChristophReich1996/Involution
+ * https://github.com/rwightman/pytorch-image-models
