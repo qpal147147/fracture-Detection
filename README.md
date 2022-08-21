@@ -151,6 +151,13 @@ python detect.py --source datasets/images/fracture.jpg --weights yolor_p6.pt --i
 ## UI
 ![UI](https://github.com/qpal147147/fracture-Detection/blob/main/example/ui.gif)
 
+### 啟動UI
+```python
+python ui.py
+```
+
+更多用法請參考[gradio](https://www.gradio.app/)
+
 ## 參考
  * https://github.com/WongKinYiu/yolor
  * https://github.com/ultralytics/yolov5
