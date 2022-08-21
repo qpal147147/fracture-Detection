@@ -18,6 +18,9 @@
 ## 方法
 <img src="https://github.com/qpal147147/fracture-Detection/blob/main/example/System%20flow.png" height="300">
 骨質疏鬆症所引起的脊椎壓迫性骨折是造成老年人疼痛與失能的原因之一，及早發現並採取治療是非常重要的事情。在MRI影像上儘管能有效的診斷出症狀，但需要較高的診斷成本，相較於MRI，CT影像診斷成本比MRI低，且在許多疾病上的診斷也相當良好，但在脊椎骨折上檢測效果卻不如MRI準確。綜合上述，為了能夠使診斷加速及把握治療的黃金期，我們提出了基於YOLOR物件檢測方法，對脊椎CT影像定位骨折區域並判別新舊骨折。實驗結果顯示，在基礎的YOLOR物件檢測方法上，獲得了92.6%的準確率，依照YOLOR架構進行Backbone的替換，將原架構中的CSPDarknet53替換為MobileViT以及EfficientNet_NS，訓練出三種不同Backbone的YOLOR模型，用以提升提取特徵的能力，分別獲得了89%、89.8%及89.2%的準確度。在此基礎上，替換卷積層為Involution層以及結合模型集成方式，集成改進的三種網路，準確率能夠提升至93.4%。
+<br><br>
+
+Vertebral compression fractures caused by osteoporosis are one of the reasons of pain and disability in the elderly. The early detection and treatment are very important. Although MRI can effectively diagnose symptoms, it requires a higher diagnostic cost. CT image has a lower diagnostic cost compared to MRI. However, CT detecting vertebral fractures is not as accurate as MRI. In order to speed up diagnosis and grasp the golden period of treatment, we proposed a YOLO-based object detection method to localize old and fresh fractures on spine CT images. We replaced the backbone of CSPDarknet53 in the native YOLOR model with MobileViT and EfficientNet_NS. Three YOLOR models with different backbone are trained separately, and finally the three YOLOR models are ensemble to improve the ability of feature extraction. Experimental results show that the accuracy of the three YOLOR models are 89%, 89.8%, and 89.2%, respectively. On this basis, these three improved networks are replaced convolution layer by Involution layer and integrated by the model ensemble method, the accuracy rate is increased to 93.4%. The proposed method achieves the purpose of being fast and accurate, and provides good advice and reference for physicians.
 
 ### 實驗比較
 | Model | Backbone | Precision | Recall | AP<sub>fresh</sub> | AP<sub>old</sub> | mAP@0.5
