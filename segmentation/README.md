@@ -57,9 +57,9 @@ pip install image-classifiers==0.2.2
                   
    ### 開始訓練
    如果你的影像路徑為如下所示:
-   ```C:\datasets\fracture\train\image_set\image\00001.bmp```  
-   則train.py的[trainX_dir、trainY_dir](https://github.com/qpal147147/fracture-Detection/blob/segmentation/train.py#L52)參數為:
-   ```C:\datasets\fracture\train\image_set```
+   `C:\datasets\fracture\train\image_set\image\00001.bmp`  
+   則train.py的[trainX_dir、trainY_dir](https://github.com/qpal147147/fracture-Detection/blob/main/segmentation/train.py#L52)參數為:
+   `C:\datasets\fracture\train\image_set`
    
    * 訓練
    ```python
