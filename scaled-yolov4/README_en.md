@@ -1,23 +1,23 @@
 <div align="center">
 
-中文 | [English](https://github.com/qpal147147/fracture-Detection/blob/main/scaled-yolov4/README_en.md)
+[中文](https://github.com/qpal147147/fracture-Detection/blob/main/scaled-yolov4/README.md) | English
 </div>
 
 # fracture-Detection
 
-此文件使用**Scaled-YOLOv4**
+This document uses **Scaled-YOLOv4**
 
-環境、訓練、測試、檢測方式請參考[ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4)
+Environment, training, testing and detection methods refer to [ScaledYOLOv4](https://github.com/WongKinYiu/ScaledYOLOv4)
 
-## 數據集
+## Dataset
 
-使用yolo格式，如以下形式:  
+Use YOLO format :  
 `<object-class> <x_center> <y_center> <width> <height>`
 
-詳細可參考[YOLOv5自定義數據教學](https://docs.ultralytics.com/tutorials/train-custom-datasets/)  
-**未包含物件的影像可當作背景影像訓練，無須標籤**
+Please see [Train Custom Data tutorial of YOLOv5](https://docs.ultralytics.com/tutorials/train-custom-datasets/) for more details.  
+**Images without objects can be used as background images for training and it doesn't require labels.**
 
-### 數據結構
+### Data structure
 
 ```text
 datasets/
@@ -59,7 +59,7 @@ datasets/
                 -00005.txt
 ```
 
-## 參考
+## Reference
 
 * <https://github.com/WongKinYiu/ScaledYOLOv4>
 * <https://github.com/ultralytics/yolov5>

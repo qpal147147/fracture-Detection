@@ -42,7 +42,7 @@ python train.py ./datasets/fracture --model tf_efficientnet_b1_ns --pretrained -
 
 Please see [documentation](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv) for more **models**.
 
-Please refer to the [tutorial]((https://timm.fast.ai/training)) for more **image augment**.
+Please refer to the [tutorial](https://timm.fast.ai/training) for more **image augment**.
 
 ## Evaluation
 

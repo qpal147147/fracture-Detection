@@ -1,17 +1,17 @@
 <div align="center">
 
-中文 | [English](https://github.com/qpal147147/fracture-Detection/blob/main/segmentation/README_en.md)
+[中文](https://github.com/qpal147147/fracture-Detection/blob/main/segmentation/README.md) | English
 </div>
 
 # Fracture segmentation
 
-此文件使用**分割模型**
+This document uses **Segmentation model**
 
-## 範例
+## Example
 
 ![segmentation](https://github.com/qpal147147/fracture-Detection/blob/main/segmentation/segmentation.png)  
 
-## 環境
+## Environment
 
 * python=3.8.11
 * tensorflow=2.4.0
@@ -26,7 +26,7 @@
 pip install image-classifiers==0.2.2
 ```
 
-## 可用模型(未按照年分排序)
+## Available models (Not sorted by year)
 
 * CBAM_ASPP_ResUNet
 * CPF-Net
@@ -36,9 +36,9 @@ pip install image-classifiers==0.2.2
 * UNet3+
 * VNet
 
-## 數據集
+## Dataset
 
-**注意**: 影像與註釋的數量必須一樣
+**Notice**: The number of images and annotations must be the same
 
 ```text
 datasets/
@@ -67,30 +67,28 @@ datasets/
                     -00003.bmp
 ```
 
-## 訓練
+## Training
 
-如果你的影像路徑為如下所示:
-`C:\datasets\fracture\train\image_set\image\00001.bmp`  
-則train.py的[trainX_dir、trainY_dir](https://github.com/qpal147147/fracture-Detection/blob/main/segmentation/train.py#L52)參數為:
-`C:\datasets\fracture\train\image_set`
+If your images path is :
+`C:\datasets\fracture\train\image_set\image\00001.bmp`, the parameter of [trainX_dir、trainY_dir](https://github.com/qpal147147/fracture-Detection/blob/main/segmentation/train.py#L52) is `C:\datasets\fracture\train\image_set`
 
 ```python
 python train.py
 ```
 
-## 評估
+## Evaluation
 
 ```python
 python ./eval/main.py -s path/to/seg -g path/to/gt
 ```
 
-## 測試
+## Testing
 
 ```python
 python inference.py
 ```
 
-## 參考
+## Reference
 
 * <https://github.com/qubvel/classification_models>
 * <https://github.com/mlyg/unified-focal-loss>
