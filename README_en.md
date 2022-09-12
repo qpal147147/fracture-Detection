@@ -1,8 +1,7 @@
 <div align="center">
-    English | [中文](.github/README.md)
+
+English | [中文](.github/README.md)
 </div>
-
-
 
 # fracture-Detection
 
