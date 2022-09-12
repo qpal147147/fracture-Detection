@@ -1,6 +1,6 @@
 <div align="center">
 
-English | [中文]([.github/README.md](https://github.com/qpal147147/fracture-Detection/blob/main/README.md))
+[中文](https://github.com/qpal147147/fracture-Detection/blob/main/README.md) | English
 </div>
 
 # fracture-Detection
