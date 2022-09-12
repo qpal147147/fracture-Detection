@@ -1,11 +1,11 @@
 <div align="center">
 
-中文 | [English](https://github.com/qpal147147/fracture-Detection/blob/main/classifier/README_en.md)
+[中文](https://github.com/qpal147147/fracture-Detection/blob/main/classifier/README.md) | English
 </div>
 
 # Classifier
 
-## 數據集
+## Data structure
 
 ```text
 datasets/
@@ -34,27 +34,28 @@ datasets/
                 -00005.jpg
 ```
 
-## 訓練
+## Training
 
 ```python
 python train.py ./datasets/fracture --model tf_efficientnet_b1_ns --pretrained --num-classes 2 --img-size 96 --batch-size 128 --opt AdamP --epochs 300
 ```
 
-更多**模型**選擇請查看[文檔](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv)  
-更多**影像增強**介紹請參閱[教學](https://timm.fast.ai/training)
+Please see [documentation](https://github.com/rwightman/pytorch-image-models/blob/master/results/results-imagenet.csv) for more **models**.
 
-## 驗證
+Please refer to the [tutorial]((https://timm.fast.ai/training)) for more **image augment**.
+
+## Evaluation
 
 ```python
 python validate.py ./datasets/fracture --model tf_efficientnet_b1_ns --num-classes 2 --img-size 96 --batch-size 256 --checkpoint ./output/train/model_best.pth.tar
 ```
 
-## 推論
+## Inference
 
 ```python
 python inference.py path/to/data --model tf_efficientnet_b1_ns --num-classes 2 --img-size 96 --checkpoint ./output/train/model_best.pth.tar
 ```
 
-## 參考
+## Reference
 
 * <https://github.com/rwightman/pytorch-image-models>

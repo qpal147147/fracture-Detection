@@ -68,7 +68,7 @@ You can use [LabelImg](https://github.com/heartexlabs/labelImg) label your data,
 Please see [Train Custom Data tutorial of YOLOv5](https://docs.ultralytics.com/tutorials/train-custom-datasets/) for more details  
 **Images without objects can be used as background images for training and it doesn't require labels.**
 
-### Data struct
+### Data structure
 
 ```text
 datasets/
