@@ -23,7 +23,7 @@ If the image without objects, the format is:
 path/to/img.bmp,,,,,
 ```
 
-If you have label file of YOLO format, you can use [yolo2csv.py](https://github.com/qpal147147/fracture-Detection/blob/main/util/yolo2csv.py) to convert to csv format:
+If you have label file of YOLO format, you can use [yolo2csv.py](https://github.com/qpal147147/fracture-Detection/blob/main/utils/yolo2csv.py) to convert to csv format:
 
 ```python
 python yolo2csv.py --images datasets/images --labels datasets/labels

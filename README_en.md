@@ -49,6 +49,8 @@
 
 ## Environment
 
+* Pytorch >= 1.7.0
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -58,7 +60,7 @@ pip install -r requirements.txt
 ### DICOM to BMP
 
 ``` python
-python util/preprocess.py dicom2img datasets/dicoms datasets/bmps --HU
+python utils/preprocess.py dicom2img datasets/dicoms datasets/bmps --HU
 ```
 
 ### Labeling

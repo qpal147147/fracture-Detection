@@ -40,7 +40,7 @@
   path/to/img.bmp,,,,,
   ```
 
-  如果你有yolo格式的label檔案，可使用[yolo2csv.py](https://github.com/qpal147147/fracture-Detection/blob/main/util/yolo2csv.py)進行轉換:  
+  如果你有yolo格式的label檔案，可使用[yolo2csv.py](https://github.com/qpal147147/fracture-Detection/blob/main/utils/yolo2csv.py)進行轉換:  
 
   ```python
   python yolo2csv.py --images datasets/images --labels datasets/labels
