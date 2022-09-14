@@ -63,9 +63,9 @@ datasets/
 
 根據你的類別數量更改cfg檔中的filters  
 `filters = (classes + 5) * 3`  
-例如，類別數量為2，filters則為`(2 + 5) * 3 = 21`。可參考[這裡](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
-<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L961>
-<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L1048>
+例如，類別數量為2，filters則為`(2 + 5) * 3 = 21`。可參考[這裡](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)  
+<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L961>  
+<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L1048>  
 <https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L1135>
 
 ## 參考

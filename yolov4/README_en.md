@@ -64,9 +64,9 @@ datasets/
 Change the filter in the cfg file based on your number of categories :  
 `filters = (classes + 5) * 3`  
 
-If your number of categories is 2, the filter is `(2 + 5) * 3 = 21`. You can refer [here](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
-<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L961>
-<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L1048>
+If your number of categories is 2, the filter is `(2 + 5) * 3 = 21`. You can refer [here](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)  
+<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L961>  
+<https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L1048>  
 <https://github.com/qpal147147/fracture-Detection/blob/main/yolov4/cfg/yolov4.cfg#L1135>
 
 ## Reference
