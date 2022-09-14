@@ -40,7 +40,7 @@ def detect(img, save_img=False):
     parser.add_argument('--name', default='exp', help='save results to project/name')
     parser.add_argument('--exist-ok', action='store_true', help='existing project/name ok, do not increment')
     opt = parser.parse_args()
-    img.save("inference/test.jpg")
+    img.save("example/test.jpg")
 
     source, weights, view_img, save_txt, imgsz = opt.source, opt.weights, opt.view_img, opt.save_txt, opt.img_size
     webcam = source.isnumeric() or source.endswith('.txt') or source.lower().startswith(
@@ -170,4 +170,4 @@ def detect(img, save_img=False):
 
     return Image.fromarray(im0[:,:,::-1])
 
-gr.Interface(fn=detect, inputs=gr.Image(type="pil", shape=(512, 512)), outputs="image", examples=["spine.bmp"]).launch()
+gr.Interface(fn=detect, inputs=gr.Image(type="pil", shape=(512, 512)), outputs="image", examples=["example/spine.bmp"]).launch()
