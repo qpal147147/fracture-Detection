@@ -13,8 +13,8 @@ torchvision>=0.8.1
 tqdm>=4.41.0
 pydicom>=2.3.0
 scikit-learn>=1.0.2
+timm==0.6.2.dev0
 git+https://github.com/ChristophReich1996/Involution  # Involution
-git+https://github.com/rwightman/pytorch-image-models.git  # timm
 
 
 # Logging -------------------------------------
