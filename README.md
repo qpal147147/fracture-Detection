@@ -49,6 +49,7 @@
 
 ## 環境
 
+* Python >= 3.7
 * Pytorch >= 1.7.0
 
 ``` shell
